@@ -1,4 +1,4 @@
-import React from 'react'
+
 import MethodIcon from '../components/Payments/MethodIcon';
 import { bitcoin_icon, etherum_icon, monero_icon, theter_icon } from '../assets/assets';
 import MethodPopUp from '../components/Payments/MethodPopUp';

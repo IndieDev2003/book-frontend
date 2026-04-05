@@ -1,9 +1,6 @@
 import Container from "./components/Container";
 import Header from "./components/Header";
-import ProductCard from "./components/ProductCard";
-import Sidebar from "./components/Sidebar";
-import Auth from "./pages/Auth";
-import Payments from "./pages/PAyments";
+import Payments from "./pages/Payments";
 
 function App() {
   return (
