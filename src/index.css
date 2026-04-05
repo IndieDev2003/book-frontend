@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Global styles */
+* {
+    /* outline: 1px solid green; */
+    /* fixed */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Hide scrollbar (correct way) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optional for Firefox */
+* {
+    scrollbar-width: none;
+}
