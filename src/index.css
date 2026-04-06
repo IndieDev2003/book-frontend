@@ -2,7 +2,7 @@
 
 /* Global styles */
 * {
-    /* outline: 1px solid green; */
+    /* outline: 1px solid red; */
     /* fixed */
     font-family: 'Outfit', sans-serif;
 }
@@ -15,4 +15,8 @@
 /* Optional for Firefox */
 * {
     scrollbar-width: none;
+}
+
+form  input{
+    @apply border border-orange-200 px-2 py-1 rounded;
 }

@@ -38,20 +38,26 @@
 
 import { useState } from "react";
 import { bitcoin_icon } from "../../assets/assets";
+import { useAtomValue, useSetAtom } from "jotai";
+import {  paymentPopUp } from "../../jotai/atom";
 
 type TMethodPopUp = {
   currency_icon?: string;
   currency_address?: string;
-  active:boolean,
+  active?:boolean,
   
 };
 
 export default function MethodPopUp({
   currency_icon,
   currency_address,
-  active,
+  
 }: TMethodPopUp) {
   const [copied, setCopied] = useState(false);
+
+  const show = useAtomValue(paymentPopUp)
+  // const popUpValue = useAtomValue(paymentMethodPopUp)
+  const setShow = useSetAtom(paymentPopUp)
 
   const address = currency_address || "TQ9hYy7Y8wX1pK2mL8ZsF4nJ6cR3vB1uAa";
 
@@ -66,7 +72,7 @@ export default function MethodPopUp({
   };
 
   return (
-    <div className={`${active?'fixed':'hidden'} top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border h-[450px] w-[250px] rounded p-3`}>
+    <div className={`${show?'fixed':'hidden'} top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border h-[450px] w-[250px] rounded p-3`}>
       <div className="h-full w-full flex gap-2 flex-col items-center justify-center px-1">
         <img
           src={currency_icon || bitcoin_icon}
@@ -100,7 +106,7 @@ export default function MethodPopUp({
           Payment Done
         </button>
 
-        <button className="px-8 py-2.5 w-full rounded bg-black text-white">
+        <button onClick={()=>setShow(false)} className="px-8 py-2.5 w-full rounded bg-black text-white">
           Cancel
         </button>
       </div>

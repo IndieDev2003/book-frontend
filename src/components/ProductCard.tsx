@@ -8,7 +8,7 @@ type TProduct={
   shipping?:string
 
 }
-function ProductCard({name,vendor,price,image,href,shipping}:TProduct) {
+function ProductCard({name,vendor,price,shipping}:TProduct) {
   return (
   <div className="max-h-48 p-1 -65 flex-1 flex border">
     <div className="h-full w-46 border"></div>
