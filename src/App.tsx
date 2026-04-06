@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-slate-900">
+      <ScrollToTop/>
       <Container>
         <Header/>
         <div className="w-full flex py-1 gap-1 h-full">
@@ -30,3 +31,19 @@ function App() {
 }
 
 export default App;
+
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+

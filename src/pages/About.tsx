@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function About() {
   return (
     <section className="p-4 pb-20">
@@ -47,7 +49,12 @@ export default function About() {
         To become a trusted global destination for online shopping by
         continuously evolving with customer needs and market trends.
       </p>
-      <h3 className="underline hover:text-orange-900 text-orange-600 cursor-pointer w-fit ">Go to home</h3>
+      <Link to={"/"}>
+    
+        <h3 className="underline hover:text-orange-900 text-orange-600 cursor-pointer w-fit ">
+          Go to home
+        </h3>
+      </Link>
     </section>
   );
 }
