@@ -8,34 +8,34 @@ function Delivery() {
         <h2 className="text-xl">Delivery Information</h2>
         <div className="flex flex-col gap-2">
           <label htmlFor="name">Your Name</label>
-          <input type="text" placeholder="" name="name" />
+          <input required type="text" placeholder="" name="name" />
           <div className="flex gap-2">
             <div className="flex w-1/2 flex-col">
               <label htmlFor="street">Street</label>
-              <input type="text" name="street" />
+              <input required type="text" name="street" />
             </div>
             <div className="flex w-1/2 flex-col">
               <label htmlFor="city">City</label>
-              <input type="text" name="city" />
+              <input required type="text" name="city" />
             </div>
           </div>
           <div className="flex gap-2">
             <div className="flex w-1/2 flex-col">
                 <label htmlFor="zipcode">Zipcode</label>
-                <input type="number" name="zipcode" id="" />
+                <input required type="number" name="zipcode" id="" />
             </div>
             <div className="flex w-1/2 flex-col">
                 <label htmlFor="state">State</label>
-                <input type="text" name="state" id="" />
+                <input required type="text" name="state" id="" />
             </div>
           </div>
           <div className="flex-col flex">
             <label htmlFor="country">Country</label>
-            <input type="text" name="country" />
+            <input required type="text" name="country" />
           </div>
           <div className="flex-col flex">
             <label htmlFor="phone">Phone</label>
-            <input type="number" name="phone" />
+            <input required type="number" name="phone" />
           </div>
           <Button link={'/payment'} style="!text-center" text="Proceed Payment"/>
         </div>
